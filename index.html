@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+    <style>
+      .main-container {
+        display: flex;
+      }
+
+      .sidebar-arrow {
+        transition: transform 0.3s ease-out;
+      }
+
+      .collapsed {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-container">
+        <img
+          src="https://app-stg.prescribenow.com/eportal/static/media/Logo.a2316b64e7988d01633ca067c9a64b2b.svg"
+          alt="Prescribe Now"
+        />
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar">
+        <div
+          class="sidebar-section"
+          onclick="toggleSection('section1', 'arrow-down-1')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-1"
+          />
+          Getting Started
+        </div>
+        <div class="section-content" id="section1">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="installation"
+            onclick="render('installation.html', 'installation')"
+          >
+            Installation
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="configuration"
+            onclick="render('configuration.html', 'configuration')"
+          >
+            Configuration
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="usage"
+            onclick="render('configuration.html', 'usage')"
+          >
+            Usage
+          </div>
+        </div>
+
+        <div
+          class="sidebar-section"
+          onclick="toggleSection('section2', 'arrow-down-2')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-2"
+          />
+          Advanced Topics
+        </div>
+        <div class="section-content" id="section2">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="installation"
+            onclick="render('installation.html', 'installation')"
+          >
+            Installation
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="configuration"
+            onclick="render('configuration.html', 'configuration')"
+          >
+            Configuration
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="usage"
+            onclick="render('configuration.html', 'usage')"
+          >
+            Usage
+          </div>
+        </div>
+
+        <div
+          class="sidebar-section"
+          onclick="toggleSection('section3', 'arrow-down-3')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-3"
+          />
+          API Reference
+        </div>
+        <div class="section-content" id="section3">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="installation"
+            onclick="render('installation.html', 'installation')"
+          >
+            Installation
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="configuration"
+            onclick="render('configuration.html', 'configuration')"
+          >
+            Configuration
+          </div>
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="usage"
+            onclick="render('configuration.html', 'usage')"
+          >
+            Usage
+          </div>
+        </div>
+      </div>
+
+      <div class="content" id="content">
+        <h2>Main Content</h2>
+        <p>
+          This is where your main content goes.
+          <a href="configuration.html">Config</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(sectionId, arrowId) {
+        var sectionContent = document.getElementById(sectionId);
+        var arrow = document.getElementById(arrowId);
+        sectionContent.style.display =
+          sectionContent.style.display === "block" ? "none" : "block";
+        arrow.classList.toggle("collapsed");
+      }
+    </script>
+
+    <script>
+      function render(pagePath, targetId) {
+        var sectionContent = document.getElementById("content");
+        var clickedSection = document.getElementById(targetId);
+
+        clickedSection.style.color = "#EC609B";
+
+        // Simulate loading content from the specified HTML page
+        fetch(pagePath)
+          .then((response) => response.text())
+          .then((html) => {
+            sectionContent.innerHTML = html;
+          });
+      }
+    </script>
+  </body>
+</html>

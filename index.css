@@ -1,0 +1,61 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 10px;
+  border-bottom: 2px solid #d4d1d1;
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  border-right: 2px solid #d4d1d1;
+  padding-top: 10px;
+  margin-right: 20px;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  cursor: pointer;
+  margin: 12px;
+  font-size: 16px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.sidebar-subsection {
+  padding-left: 16px;
+  margin: 0px;
+  margin-bottom: 6px;
+}
+
+.sidebar-section:hover,
+.selected {
+  color: #d4d1d1;
+}
+
+.section-content {
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+}
+
+.sidebar a {
+  margin: 10px;
+  text-decoration: none;
+  color: #d4d1d1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar-arrow {
+  height: 8px;
+  padding-bottom: 2px;
+}
