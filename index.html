@@ -9,8 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
     />
     <style>
+      html,
+      body {
+        height: 100%;
+      }
       .main-container {
         display: flex;
+        height: 100%;
       }
 
       .sidebar-arrow {
@@ -43,15 +48,15 @@
             class="sidebar-arrow"
             id="arrow-down-1"
           />
-          Getting Started
+          Lab Orders
         </div>
         <div class="section-content" id="section1">
           <div
             class="sidebar-section sidebar-subsection"
-            id="installation"
-            onclick="render('installation.html', 'installation')"
+            id="creating-a-lab-order"
+            onclick="render('creating-a-lab-order.html', 'creating-a-lab-order')"
           >
-            Installation
+            Creating a Lab Order
           </div>
 
           <div

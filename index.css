@@ -10,11 +10,9 @@ body {
 }
 
 .sidebar {
-  height: 100%;
-  width: 230px;
-  border-right: 2px solid #d4d1d1;
+  height: 100% !important;
+  width: 250px !important;
   padding-top: 10px;
-  margin-right: 20px;
   font-size: 16px;
   overflow-y: auto;
 }
@@ -58,4 +56,30 @@ body {
 .sidebar-arrow {
   height: 8px;
   padding-bottom: 2px;
+}
+
+.content {
+  max-width: calc(100% - 272px);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 2px solid #d4d1d1;
+}
+
+.image-container {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  max-width: 100%;
+}
+
+.main-heading {
+  color: #ec609b;
+}
+
+.sub-heading {
+  color: #ec609b;
 }
