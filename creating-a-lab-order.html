@@ -4,54 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creating a Lab Order</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    />
-
-    <style>
-      .small-image img {
-        width: 200px;
-      }
-
-      .medium-image img {
-        max-width: 300px;
-      }
-
-      .large-image img {
-        max-width: 600px;
-      }
-    </style>
+    <!-- <link rel="stylesheet" href="/index.css/" /> -->
+    <link href="index.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- *********** -->
-    <div class="text-container">
-      <h2 class="main-heading">Lab Order</h2>
-      <p class="info">
-        A lab order is a request from a physician to a clinical laboratory to
-        perform certain tests on a patient.
-      </p>
-      <h3 class="sub-heading">Creating a Lab Order</h3>
-      <p class="info">
-        1. To create a lab order, select ‘Patients’ from the home screen.
-      </p>
-      <p class="info">
-        2. Select the patient's name to be referred for a lab test.
-      </p>
-    </div>
-    <div class="image-container small-image">
-      <img src="assets/creating-a-lab-order/Picture1.png" alt="Picture1" />
+    <div class="sec">
+      <div class="text-container">
+        <h2 class="main-heading">Lab Order</h2>
+        <p class="info">
+          A lab order is a request from a physician to a clinical laboratory to
+          perform certain tests on a patient.
+        </p>
+        <h3 class="sub-heading">Creating a Lab Order</h3>
+        <p class="info">
+          1. To create a lab order, select ‘Patients’ from the home screen.
+        </p>
+        <p class="info">
+          2. Select the patient's name to be referred for a lab test.
+        </p>
+        <p class="info">
+          3. Click on ‘New’ at the far right of your screen and select ‘Lab
+          Order’. You will arrive at the following screen:
+        </p>
+      </div>
+      <div class="image-container small-image">
+        <img src="assets/creating-a-lab-order/Picture1.png" alt="Picture1" />
+      </div>
     </div>
 
     <!-- *********** -->
-    <div class="text-container">
-      <p class="info">
-        3. Click on ‘New’ at the far right of your screen and select ‘Lab
-        Order’. You will arrive at the following screen:
-      </p>
-    </div>
-    <div class="image-container large-image">
+    <div class="image-container-full large-image" style="margin-top: -20px">
       <img src="assets/creating-a-lab-order/Picture2.png" alt="Picture2" />
     </div>
 
@@ -65,29 +48,37 @@
         the number of hours your patient should be fasting before giving a lab
         sample.
       </p>
-      <p class="info">
-        5. Select ‘Next’ to confirm your specimen choices. This will open ‘Labs
-        Requested’.
-      </p>
-      <p class="info">
-        6. Enter specific test(s) name in the text field you want to perform on
-        patient and click on ‘Add’.
-      </p>
-    </div>
-    <div class="image-container medium-image">
-      <img src="assets/creating-a-lab-order/Picture3.png" alt="Picture3" />
     </div>
 
     <!-- *********** -->
-    <div class="text-container">
-      <p class="info">
-        8. Enter any ‘Additional Tests’ that you may require and give reasons
-        why the test should be prescribed in the text field labelled ‘Reason for
-        Test’ for better understanding of lab attendant.
-      </p>
+    <div class="sec">
+      <div class="text-container">
+        <p class="info">
+          5. Select ‘Next’ to confirm your specimen choices. This will open
+          ‘Labs Requested’.
+        </p>
+        <p class="info">
+          6. Enter specific test(s) name in the text field you want to perform
+          on patient and click on ‘Add’.
+        </p>
+      </div>
+      <div class="image-container medium-image">
+        <img src="assets/creating-a-lab-order/Picture3.png" alt="Picture3" />
+      </div>
     </div>
-    <div class="image-container medium-image">
-      <img src="assets/creating-a-lab-order/Picture4.png" alt="Picture4" />
+
+    <!-- *********** -->
+    <div class="sec">
+      <div class="image-container medium-image" style="margin-top: -60px">
+        <img src="assets/creating-a-lab-order/Picture4.png" alt="Picture4" />
+      </div>
+      <div class="text-container">
+        <p class="info">
+          8. Enter any ‘Additional Tests’ that you may require and give reasons
+          why the test should be prescribed in the text field labelled ‘Reason
+          for Test’ for better understanding of lab attendant.
+        </p>
+      </div>
     </div>
 
     <!-- *********** -->
@@ -97,7 +88,7 @@
         example, for urine tests, select from one of the test codes shown here.
       </p>
     </div>
-    <div class="image-container large-image">
+    <div class="image-container-full large-image">
       <img src="assets/creating-a-lab-order/Picture5.png" alt="Picture5" />
     </div>
 
@@ -109,7 +100,7 @@
         and in the interest of the patient, you may print the Lab Test Request.
       </p>
     </div>
-    <div class="image-container large-image">
+    <div class="image-container-full large-image">
       <img src="assets/creating-a-lab-order/Picture6.png" alt="Picture6" />
     </div>
 
@@ -117,7 +108,7 @@
     <div class="text-container">
       <p class="info">11. Below is a sample Lab Test Request.</p>
     </div>
-    <div class="image-container large-image">
+    <div class="image-container-full large-image">
       <img src="assets/creating-a-lab-order/Picture7.png" alt="Picture7" />
     </div>
 
@@ -129,8 +120,17 @@
         here as well.
       </p>
     </div>
-    <div class="image-container large-image">
+    <div class="image-container-full large-image">
       <img src="assets/creating-a-lab-order/Picture8.png" alt="Picture8" />
     </div>
+
+    <!-- *********** -->
+    <div class="text-container">
+      <p class="info">There are many other ways to initiate a new Lab Order:</p>
+    </div>
+    <div class="image-container-full large-image">
+      <img src="assets/creating-a-lab-order/Picture9.png" alt="Picture9" />
+    </div>
+    <br /><br />
   </body>
 </html>

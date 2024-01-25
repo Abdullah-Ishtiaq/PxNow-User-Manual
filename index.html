@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="/index.css/" /> -->
+    <link href="index.css" media="screen" rel="stylesheet" type="text/css" />
+    <title>Prescribe Now</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
     />
     <style>
       html,
@@ -15,7 +17,7 @@
       }
       .main-container {
         display: flex;
-        height: 100%;
+        margin-top: 60px;
       }
 
       .sidebar-arrow {
@@ -58,22 +60,6 @@
           >
             Creating a Lab Order
           </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="configuration"
-            onclick="render('configuration.html', 'configuration')"
-          >
-            Configuration
-          </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="usage"
-            onclick="render('configuration.html', 'usage')"
-          >
-            Usage
-          </div>
         </div>
 
         <div
@@ -86,69 +72,30 @@
             class="sidebar-arrow"
             id="arrow-down-2"
           />
-          Advanced Topics
+          Prescription
         </div>
         <div class="section-content" id="section2">
           <div
             class="sidebar-section sidebar-subsection"
-            id="installation"
-            onclick="render('installation.html', 'installation')"
+            id="creating-a-medication-order"
+            onclick="toggleSection('section2-1', 'arrow-down-2-1'); render('creating-a-medication-order.html', 'creating-a-medication-order')"
           >
-            Installation
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-2-1"
+            />
+            Creating a Medication &nbsp;&nbsp;&nbsp;Order
           </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="configuration"
-            onclick="render('configuration.html', 'configuration')"
-          >
-            Configuration
-          </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="usage"
-            onclick="render('configuration.html', 'usage')"
-          >
-            Usage
-          </div>
-        </div>
-
-        <div
-          class="sidebar-section"
-          onclick="toggleSection('section3', 'arrow-down-3')"
-        >
-          <img
-            src="assets/right-arrow.png"
-            alt=""
-            class="sidebar-arrow"
-            id="arrow-down-3"
-          />
-          API Reference
-        </div>
-        <div class="section-content" id="section3">
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="installation"
-            onclick="render('installation.html', 'installation')"
-          >
-            Installation
-          </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="configuration"
-            onclick="render('configuration.html', 'configuration')"
-          >
-            Configuration
-          </div>
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="usage"
-            onclick="render('configuration.html', 'usage')"
-          >
-            Usage
+          <div class="section-content" id="section2-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="medication-order"
+              onclick="render('medication-orders.html', 'medication-order')"
+            >
+              Medication Orders
+            </div>
           </div>
         </div>
       </div>
@@ -163,6 +110,13 @@
     </div>
 
     <script>
+      window.onload = function () {
+        toggleSection("section1", "arrow-down-1");
+        render("creating-a-lab-order.html", "creating-a-lab-order");
+      };
+    </script>
+
+    <script>
       function toggleSection(sectionId, arrowId) {
         var sectionContent = document.getElementById(sectionId);
         var arrow = document.getElementById(arrowId);
@@ -175,8 +129,15 @@
     <script>
       function render(pagePath, targetId) {
         var sectionContent = document.getElementById("content");
-        var clickedSection = document.getElementById(targetId);
+        var sidebarSections = document.querySelectorAll(".sidebar-section");
 
+        // Reset the color of all sidebar sections to black
+        sidebarSections.forEach(function (section) {
+          section.style.color = "black";
+        });
+
+        // Change the color of the clicked section
+        var clickedSection = document.getElementById(targetId);
         clickedSection.style.color = "#EC609B";
 
         // Simulate loading content from the specified HTML page
