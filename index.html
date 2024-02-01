@@ -98,14 +98,84 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="sidebar-section"
+          id="patients"
+          onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-3"
+          />
+          Patients
+        </div>
+        <div class="section-content" id="section3">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="advanced-search"
+            onclick="toggleSection('section3-1', 'arrow-down-3-1'); render('advanced-search.html', 'advanced-search')"
+          >
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-3-1"
+            />
+            Advanced Search
+          </div>
+          <div class="section-content" id="section3-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="demographics"
+              onclick="render('demographics.html', 'demographics')"
+            >
+              Demographics
+            </div>
+          </div>
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="on-selecting-patients-name"
+            onclick="render('on-selecting-patients-name.html', 'on-selecting-patients-name')"
+          >
+            On Selecting a Patient’s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name
+          </div>
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="patient-information-tab"
+            onclick="render('patient-information-tab.html', 'patient-information-tab')"
+          >
+            Patient Information Tab
+          </div>
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="messages-tab"
+            onclick="render('messages-tab.html', 'messages-tab')"
+          >
+            Messages tab
+          </div>
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="prescription-tab"
+            onclick="render('prescription-tab.html', 'prescription-tab')"
+          >
+            Prescription Tab
+          </div>
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="encounter-tab"
+            onclick="render('encounter-tab.html', 'encounter-tab')"
+          >
+            Encounter Tab
+          </div>
+        </div>
       </div>
 
       <div class="content" id="content">
         <h2>Main Content</h2>
-        <p>
-          This is where your main content goes.
-          <a href="configuration.html">Config</a>
-        </p>
+        <p>Default Content.</p>
       </div>
     </div>
 

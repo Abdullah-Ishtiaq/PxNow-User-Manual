@@ -89,6 +89,10 @@ body {
   justify-content: space-between;
 }
 
+.sec-images {
+  display: flex;
+}
+
 .image-container {
   margin: 20px;
 }
@@ -104,6 +108,16 @@ body {
   max-width: 100%;
   margin-bottom: 16px;
   line-height: 34px;
+}
+
+.info a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.info a:hover {
+  color: #d4d1d1;
 }
 
 .main-heading {
@@ -126,4 +140,8 @@ body {
 
 .large-image img {
   max-width: 600px;
+}
+
+.bullet {
+  margin-bottom: 10px;
 }
