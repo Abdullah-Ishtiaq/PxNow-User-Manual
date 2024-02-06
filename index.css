@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar {
-  height: 100% !important;
+  height: 90vh;
   width: 300px !important;
   position: fixed;
   background-color: white;
@@ -78,6 +78,7 @@ body {
 }
 
 .content {
+  flex-grow: 1;
   margin-left: 340px;
   padding-left: 30px;
   padding-right: 30px;
