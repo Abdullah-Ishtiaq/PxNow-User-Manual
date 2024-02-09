@@ -278,8 +278,6 @@
           </div>
         </div>
 
-        <!-- ///////////////////////////// -->
-
         <hr class="hr-1" />
 
         <div
@@ -474,6 +472,81 @@
         >
           Patient Onboarding
         </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="provider-onboarding"
+          onclick="toggleSection('section6', 'arrow-down-6'); render('provider-onboarding.html', 'provider-onboarding')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-6"
+          />
+          Provider Onboarding
+        </div>
+        <div class="section-content" id="section6">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="edit-user"
+            onclick="render('edit-user.html', 'edit-user')"
+          >
+            Edit User
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="review-system"
+            onclick="render('review-system.html', 'review-system')"
+          >
+            Review System
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="reset-your-password"
+            onclick="render('reset-your-password.html', 'reset-your-password')"
+          >
+            Reset your Password
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="delete-user"
+            onclick="render('delete-user.html', 'delete-user')"
+          >
+            Delete User
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="calendar"
+          onclick="render('calendar.html', 'calendar')"
+        >
+          Calendar
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="facilities"
+          onclick="render('facilities.html', 'facilities')"
+        >
+          Facilities
+        </div>
       </div>
 
       <div class="content" id="content">
@@ -519,6 +592,9 @@
           .then((html) => {
             sectionContent.innerHTML = html;
           });
+
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     </script>
   </body>
