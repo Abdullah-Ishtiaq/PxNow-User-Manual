@@ -30,13 +30,13 @@
       }
 
       .hr-1 {
-        width: 260px;
-        margin-left: 14px;
+        width: 274px;
+        margin-left: 4px;
       }
 
       .hr-2 {
-        width: 236px;
-        margin-left: 16px;
+        width: 256px;
+        margin-left: 4px;
       }
     </style>
   </head>
@@ -99,7 +99,7 @@
               class="sidebar-arrow"
               id="arrow-down-2-1"
             />
-            Creating a Medication &nbsp;&nbsp;&nbsp;Order
+            Create Medication Order
           </div>
           <div class="section-content" id="section2-1">
             <div
@@ -159,7 +159,7 @@
             id="on-selecting-patients-name"
             onclick="render('on-selecting-patients-name.html', 'on-selecting-patients-name')"
           >
-            On Selecting a Patient’s name
+            Selecting Patient’s Name
           </div>
 
           <hr class="hr-2" />
@@ -210,6 +210,31 @@
             onclick="render('labs-tab.html', 'labs-tab')"
           >
             Labs Tab
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="imaging-orders-tab"
+          onclick="toggleSection('section10', 'arrow-down-10'); render('imaging-orders-tab.html', 'imaging-orders-tab')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-10"
+          />
+          Imaging Orders Tab
+        </div>
+        <div class="section-content" id="section10">
+          <div
+            class="sidebar-section sidebar-subsection-2"
+            id="requesting-an-imaging-order"
+            onclick="render('requesting-an-imaging-order.html', 'requesting-an-imaging-order')"
+          >
+            Request Imaging Order
           </div>
         </div>
 
@@ -274,7 +299,7 @@
             id="updating-patients-account"
             onclick="render('updating-patients-account.html', 'updating-patients-account')"
           >
-            Updating Patient’s account
+            Update Patient’s account
           </div>
         </div>
 
@@ -501,16 +526,6 @@
 
           <div
             class="sidebar-section sidebar-subsection"
-            id="review-system"
-            onclick="render('review-system.html', 'review-system')"
-          >
-            Review System
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
             id="reset-your-password"
             onclick="render('reset-your-password.html', 'reset-your-password')"
           >
@@ -543,9 +558,124 @@
         <div
           class="sidebar-section"
           id="facilities"
-          onclick="render('facilities.html', 'facilities')"
+          onclick="toggleSection('section7', 'arrow-down-7'); render('facilities.html', 'facilities')"
         >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-7"
+          />
           Facilities
+        </div>
+        <div class="section-content" id="section7">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="adding-a-new-facility"
+            onclick="render('adding-a-new-facility.html', 'adding-a-new-facility')"
+          >
+            Adding a new Facility
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="user-roles"
+          onclick="render('user-roles.html', 'user-roles')"
+        >
+          User Roles
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="settings-tenant"
+          onclick="render('settings-tenant.html', 'settings-tenant')"
+        >
+          Settings: Tenant
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="invite-user"
+          onclick="render('invite-user.html', 'invite-user')"
+        >
+          Invite User
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="in-person-visit"
+          onclick="toggleSection('section8', 'arrow-down-8'); render('in-person-visit.html', 'in-person-visit')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-8"
+          />
+          In-Person Visit
+        </div>
+        <div class="section-content" id="section8">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="staff"
+            onclick="render('staff.html', 'staff')"
+          >
+            Staff
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="medical assistant"
+            onclick="render('medical assistant.html', 'medical assistant')"
+          >
+            Medical Assistant
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="reports"
+          onclick="toggleSection('section9', 'arrow-down-9'); render('reports.html', 'reports')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-9"
+          />
+          Reports
+        </div>
+        <div class="section-content" id="section9">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="huddle-sheet"
+            onclick="render('huddle-sheet.html', 'huddle-sheet')"
+          >
+            Huddle Sheet
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="setting-appointment-date"
+            onclick="render('setting-appointment-date.html', 'setting-appointment-date')"
+          >
+            Setting Appointment Date
+          </div>
         </div>
       </div>
 
